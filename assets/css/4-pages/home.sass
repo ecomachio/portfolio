@@ -10,18 +10,34 @@
   flex: 1
 
   section
-    padding: 50px
+    padding: 50px 0
 
   .flex
     display: flex
     flex-direction: rows
+
+  .flex--center
     justify-content: center
 
+  .flex--space-around
+    justify-content: space-around
+
+  .order-first
+    order: -1
 // Columns
 .col-1
   max-width: 300px
   margin: 0 10px
   background: $green
+
+.col-2
+  max-width: 620px
+  margin: 0 10px
+  background: $blue
+
+.col-50
+  width: 50%
+  background: $fuchsia
 
 @media (max-width: 640px)
   .home-sections .flex
@@ -29,3 +45,6 @@
 
   .col-1
     max-width: 100%
+
+  .col-50
+    width: auto
