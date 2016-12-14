@@ -1,0 +1,31 @@
+.home-wrap
+  display: flex
+  min-height: 100vh
+
+
+  @media (max-width: 775px)
+    display: block
+
+.home-sections
+  flex: 1
+
+  section
+    padding: 50px
+
+  .flex
+    display: flex
+    flex-direction: rows
+    justify-content: center
+
+// Columns
+.col-1
+  max-width: 300px
+  margin: 0 10px
+  background: $green
+
+@media (max-width: 640px)
+  .home-sections .flex
+    display: block
+
+  .col-1
+    max-width: 100%
