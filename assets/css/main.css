@@ -473,8 +473,7 @@ input[type="button"] {
 
 .col-1 {
   max-width: 300px;
-  margin: 0 10px;
-  background: #2ECC40; }
+  margin: 0 10px; }
 
 .col-2 {
   max-width: 620px;
@@ -492,3 +491,8 @@ input[type="button"] {
     max-width: 100%; }
   .col-50 {
     width: auto; } }
+
+section.about {
+  background-image: url(/assets/img/back.jpg);
+  background-color: #7FDBFF;
+  background-size: contain; }
