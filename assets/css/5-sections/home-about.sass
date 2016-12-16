@@ -1,6 +1,24 @@
 section.about
+  color: $silver
   background:
     image: url(/assets/img/back.jpg)
     color: $aqua
     size: contain
-    
+  h2
+    color: $silver
+    font:
+      size: 60px
+    margin-left: -108px
+  p.home-lead
+    font:
+      size: 36px
+
+  .home-lead
+    padding-bottom: 180px
+
+@media (max-width:640px)
+  section.about
+    h2, p
+      margin-left: auto
+      margin-right: auto
+      max-width: 300px
