@@ -499,7 +499,6 @@ input[type="button"] {
 
 section.about {
   color: #ddd;
-  background-image: url(/assets/img/back.jpg);
   background-color: #7FDBFF;
   background-size: contain; }
   section.about h2 {
