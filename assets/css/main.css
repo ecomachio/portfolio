@@ -606,3 +606,77 @@ section.youtube {
         width: auto; }
         section.youtube .col-1:last-child {
           padding: 0px 20px 50px; } }
+
+section.mentoring {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  overflow: hidden; }
+  section.mentoring .home-lead {
+    margin-top: 250px; }
+  section.mentoring .faces {
+    list-style: none;
+    margin: -50px 0;
+    height: -webkit-calc(100% + 100px);
+    height: calc(100% + 100px);
+    padding: 0;
+    position: relative;
+    top: 120%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    width: 550px; }
+    section.mentoring .faces.launched {
+      top: 0; }
+  section.mentoring .face {
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-bottom: 35px;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative; }
+  section.mentoring .bubble {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    bottom: 60%;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    -webkit-border-radius: 40px 40px 40px 4px;
+            border-radius: 40px 40px 40px 4px;
+    border: 3px solid white;
+    -webkit-transition: all 0.2s cubic-bezier(0, 0.38, 0.32, 1.64);
+    transition: all 0.2s cubic-bezier(0, 0.38, 0.32, 1.64);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left; }
+  section.mentoring .face.has-bubble-open .bubble {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
+  section.mentoring .col-1 {
+    padding: 0 50px; }
+
+@media (max-width: 640px) {
+  section.mentoring .home-lead {
+    margin: 0; }
+  section.mentoring .faces {
+    margin: 200px 0 40px 0;
+    width: 690px; }
+  section.mentoring .face {
+    display: inline-block;
+    margin: 15px; }
+  section.mentoring .bubble {
+    left: 50%;
+    bottom: 110%; } }
