@@ -1,16 +1,59 @@
 section.about
   color: $silver
   background:
-    color: $aqua
+    color: $white
     size: contain
+  position: relative
+  width: 100%
+  padding: 0
+  height: 100vh
+
   h2
-    color: $silver
+    color: $black
     font:
       size: 60px
-    margin-left: -108px
+    margin: 40% 0 4% 0
+    font-style: normal
+    font-weight: 400
+    text-align: left
+    letter-spacing: -3px
+    font-family: 'Avenirltstd heavy'
+    font-size: 500%
+    line-height: 74px
 
   .home-lead
     padding-bottom: 180px
+
+  .lead-line
+    position: absolute
+    top: 20%
+    background: $black
+    border: solid 1px #000
+    box-sizing: border-box
+    width: 100%
+    z-index: 1
+
+  .about-line
+    border: solid 1px #000
+    box-sizing: border-box
+    width: 30%
+    margin: 10px 0
+
+  .col-2
+    margin-left: 47%
+
+    @media (max-width:1110px)
+      margin-left: 20%
+
+  a
+    z-index: 1
+    font-family: 'Avenirltstd light', sans-serif
+    color: $black
+    font-size: 16px
+    line-height: 32px
+    font-weight: 200
+    text-decoration: none
+    text-shadow: none
 
 @media (max-width:640px)
   section.about
