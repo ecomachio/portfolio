@@ -336,15 +336,16 @@ input[type="button"] {
 .home-wrap header {
   width: 135px;
   background: white;
-  padding: 30px 0; }
+  padding: 30px 0;
+  z-index: 5; }
   .home-wrap header a {
     color: #141414; }
   .home-wrap header .lead-line-header {
     position: fixed;
     top: 20%;
-    background: #000;
+    background: #141414;
     width: 135px;
-    border: solid 1px #000;
+    border-top: solid 2px #141414;
     box-sizing: border-box; }
   .home-wrap header .header-position {
     position: fixed;
@@ -515,7 +516,28 @@ section.about {
   position: relative;
   width: 100%;
   padding: 0;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
+  section.about .col-2 {
+    margin-left: 47%; }
+    @media (max-width: 1024px) {
+      section.about .col-2 {
+        margin-left: 30%; } }
+    @media (max-width: 775px) {
+      section.about .col-2 {
+        margin-left: 10%; } }
+  section.about .blank {
+    overflow: hidden;
+    min-height: 20%;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    border-bottom: 2px solid #000;
+    z-index: 2; }
+    @media (max-width: 775px) {
+      section.about .blank {
+        display: none; } }
   section.about h2 {
     color: #141414;
     font-size: 60px;
@@ -527,26 +549,25 @@ section.about {
     font-family: 'Avenirltstd heavy';
     font-size: 500%;
     line-height: 74px; }
+    @media (max-width: 775px) {
+      section.about h2 {
+        margin: 15% 0 4% 0;
+        font-size: 450%; } }
   section.about .home-lead {
     padding-bottom: 180px; }
   section.about .lead-line {
     position: absolute;
     top: 20%;
     background: #141414;
-    border: solid 1px #000;
+    border: solid 1px #141414;
     box-sizing: border-box;
     width: 100%;
     z-index: 1; }
   section.about .about-line {
-    border: solid 1px #000;
+    border: solid 1px #141414;
     box-sizing: border-box;
     width: 30%;
     margin: 10px 0; }
-  section.about .col-2 {
-    margin-left: 47%; }
-    @media (max-width: 1110px) {
-      section.about .col-2 {
-        margin-left: 20%; } }
   section.about a {
     z-index: 1;
     font-family: 'Avenirltstd light', sans-serif;
@@ -560,13 +581,25 @@ section.about {
 @media (max-width: 640px) {
   section.about h2, section.about p {
     margin-left: auto;
-    margin-right: auto;
-    max-width: 300px; } }
+    margin-right: auto; } }
 
 section.youtube {
   background-position: center;
   background-size: cover;
-  color: #fff; }
+  color: #fff;
+  height: 100vh;
+  padding: 0;
+  background: #141414;
+  position: relative; }
+  section.youtube .lead-line {
+    position: absolute;
+    top: 20%;
+    border: solid 1px #fff;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 1; }
+  section.youtube h2 {
+    color: #fff; }
   section.youtube .home-cta {
     color: #e20a0a; }
   section.youtube .video-strip {

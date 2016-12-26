@@ -1,74 +1,22 @@
 $( document ).ready(function() {
-  startFullScreen();
   mentoringBubbleClick();
 });
 
-/*
-Função scroll desativada horizontalScroll
-$(function() {
+function parallaxAbout() {
 
-   $("body").mousewheel(function(event, delta) {
+  var st = $(window).scrollTop();
+  var $hero = $('.hero');
+  var $leadLine = $('.lead-line');
+  var $blank = $('.blank');
 
-      this.scrollLeft -= (delta * 80);
-      var headerWidth = $('header').width();
-      var nb_entities = $('section').length;
-      var widthWindow = $(window).width() - headerWidth;
-      var leftValue;
-      var hScroll = $(window).scrollLeft();
+  $blank.css({
+    'transform' : 'translate(0px, ' + st /4 + 'px)'
+  })
 
+  $hero.css({
+    'transform' : 'translate(0px, ' + st /2 + 'px)'
+  })
 
-      leftValue = Math.floor(hScroll + headerWidth);
-      console.log(Math.floor($('.youtube').offset().left));
-
-      $('.about').css('left', leftValue + 'px')
-      console.log(Math.floor($('.youtube').offset().left));
-      console.log(hScroll);
-
-      $('section').each(function( index ) {
-        console.log($(this));
-
-        if(leftValue >= Math.floor($(this).offset().left)){
-          $(this).css('left', leftValue + 'px');
-          $(this).addClass('locked');
-        }
-
-        //$('.mentoring').css('left', leftValue + 'px');
-
-      });
-
-      event.preventDefault();
-
-   });
-
-});
-*/
-function startFullScreen(){
-
-  var headerWidth = $('header').width();
-  var nb_entities = $('section').length;
-  var widthWindow = $(window).width() - headerWidth;
-  var leftValue;
-
-  //$('.home-wrap').css('height', $(window).height());
-
-  /*
-  //multiplica o tamanho de uma tela pela quantidade de sections
-  var fullPageWidth = widthWindow * nb_entities;
-  $('.home-wrap').css('width', + fullPageWidth + 'px')
-
-
-  $( "section" ).each(function( index ) {
-    //todos as sections recebem o mesmo width
-    $(this).css('width', + widthWindow + 'px')
-    //todos as sections recebem o mesmo heigth (altura da window)
-    $(this).css('height', $(window).height());
-
-    //seta o left das sections (quanto maior o index, maior o left para a div ficar fora do window)
-    leftValue = (widthWindow * index) + headerWidth;
-    $(this).css('left', + leftValue + 'px')
-
-  });
-  */
 }
 
 $(window).scroll(function(){
@@ -76,6 +24,7 @@ $(window).scroll(function(){
   startMentoring();
   //teste();
   horizontalScroll();
+  parallaxAbout();
 });
 
 function horizontalScroll() {
@@ -168,7 +117,7 @@ function teste(){
 }
 
 $(window).resize(function(){
-  startFullScreen();
+  //startFullScreen();
 });
 
 function startMentoring(){
@@ -186,3 +135,75 @@ function youtubeVidScroll(){
   $('.video-strip').css('background-position', 'center -'+ yScroll +'px');
 
 }
+
+/*
+Função scroll desativada horizontalScroll
+$(function() {
+
+   $("body").mousewheel(function(event, delta) {
+
+      this.scrollLeft -= (delta * 80);
+      var headerWidth = $('header').width();
+      var nb_entities = $('section').length;
+      var widthWindow = $(window).width() - headerWidth;
+      var leftValue;
+      var hScroll = $(window).scrollLeft();
+
+
+      leftValue = Math.floor(hScroll + headerWidth);
+      console.log(Math.floor($('.youtube').offset().left));
+
+      $('.about').css('left', leftValue + 'px')
+      console.log(Math.floor($('.youtube').offset().left));
+      console.log(hScroll);
+
+      $('section').each(function( index ) {
+        console.log($(this));
+
+        if(leftValue >= Math.floor($(this).offset().left)){
+          $(this).css('left', leftValue + 'px');
+          $(this).addClass('locked');
+        }
+
+        //$('.mentoring').css('left', leftValue + 'px');
+
+      });
+
+      event.preventDefault();
+
+   });
+
+});
+*/
+
+
+/*
+function startFullScreen(){
+
+  var headerWidth = $('header').width();
+  var nb_entities = $('section').length;
+  var widthWindow = $(window).width() - headerWidth;
+  var leftValue;
+
+  //$('.home-wrap').css('height', $(window).height());
+
+
+  //multiplica o tamanho de uma tela pela quantidade de sections
+  var fullPageWidth = widthWindow * nb_entities;
+  $('.home-wrap').css('width', + fullPageWidth + 'px')
+
+
+  $( "section" ).each(function( index ) {
+    //todos as sections recebem o mesmo width
+    $(this).css('width', + widthWindow + 'px')
+    //todos as sections recebem o mesmo heigth (altura da window)
+    $(this).css('height', $(window).height());
+
+    //seta o left das sections (quanto maior o index, maior o left para a div ficar fora do window)
+    leftValue = (widthWindow * index) + headerWidth;
+    $(this).css('left', + leftValue + 'px')
+
+  });
+
+}
+*/
