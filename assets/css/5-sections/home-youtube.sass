@@ -3,10 +3,12 @@ section.youtube
     position: center
     size: cover
   color: $white
-  height: 100vh
+  min-height: 100vh
+  height: auto
   padding: 0
   background: $secondary
   position: relative
+  font-family: 'Avenirltstd heavy'
 
   .lead-line
     position: absolute
@@ -16,8 +18,12 @@ section.youtube
     width: 100%
     z-index: 1
 
+  .work-header
+    padding: 5% 0
+
   h2
     color: $primary
+    margin: 0
 
   .home-cta
     color: #e20a0a
@@ -36,20 +42,76 @@ section.youtube
     @media(max-width: 640px)
       display: none
 
+  .col-1
+    margin: 0
+    height: auto
+    width: auto
+    max-width: 30%
+    font-size: 4px
+    @media(max-width: 775px)
+      max-width: 40%
+    @media(max-width: 640px)
+      max-width: 100%
+
+
+  .caption
+    display: inline-block
+    position: relative
+    overflow: hidden
+    background: #000
+    height: 50%
+
+  .caption::before,
+  .caption::after
+    width: calc(100% - 10px)
+    position: absolute
+    height: 50%
+    color: #fff
+    z-index: 1
+    transition: transform 0.3s ease-in-out
+    @media(max-width: 640px)
+      display: none
+
+  .caption::after
+    content: attr(data-title)
+    top: 0
+    background: rgba(0,0,0,0.4)
+    font-size: 6em
+    padding: 10px 0 0 20px
+    font-weight: 300
+    transform: translateY(-100%)
+
+  .caption::before
+    content:  attr(data-description)
+    top: 50%
+    background: rgba(255, 255, 255, 0.9)
+    font-size: 4em
+    padding: 20px 0 0 5%
+    color: $secondary
+    transform: translateY(100%)
+
+  .caption img
+  	display: block
+  	width: 100%
+  	transition: all 0.3s ease-in-out
+
+  .caption:hover img
+    opacity: 0.5
+    transform: translateY(-20%)
+    @media(max-width: 640px)
+      opacity: 1
+      transform: translateY(0)
+
+  .caption:hover::before,
+  .caption:hover::after
+    transform: translateY(0%)
+
   .flex-video
     box-shadow: 0px 4px 40px 3px rgba(0,0,0,0.5)
     transform: scale(1.4)
 
     @media(max-width: 985px)
       transform: scale(1)
-
-  .col-1
-    position: relative
-    width: 100%
-    height: 400px
-    display: flex
-    flex-direction: column
-    justify-content: center
 
     @media(max-width: 640px)
       height: auto

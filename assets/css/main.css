@@ -472,8 +472,8 @@ input[type="button"] {
   .home-sections .flex {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: rows;
-        flex-direction: rows; }
+    -ms-flex-direction: row;
+        flex-direction: row; }
   .home-sections .flex--center {
     -ms-flex-pack: center;
         justify-content: center; }
@@ -553,6 +553,10 @@ section.about {
       section.about h2 {
         margin: 15% 0 4% 0;
         font-size: 450%; } }
+    @media (max-width: 470px) {
+      section.about h2 {
+        font-size: 340%;
+        line-height: 50px; } }
   section.about .home-lead {
     padding-bottom: 180px; }
   section.about .lead-line {
@@ -587,10 +591,12 @@ section.youtube {
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding: 0;
   background: #141414;
-  position: relative; }
+  position: relative;
+  font-family: 'Avenirltstd heavy'; }
   section.youtube .lead-line {
     position: absolute;
     top: 20%;
@@ -598,8 +604,11 @@ section.youtube {
     box-sizing: border-box;
     width: 100%;
     z-index: 1; }
+  section.youtube .work-header {
+    padding: 5% 0; }
   section.youtube h2 {
-    color: #fff; }
+    color: #fff;
+    margin: 0; }
   section.youtube .home-cta {
     color: #e20a0a; }
   section.youtube .video-strip {
@@ -614,6 +623,72 @@ section.youtube {
     @media (max-width: 640px) {
       section.youtube .video-strip {
         display: none; } }
+  section.youtube .col-1 {
+    margin: 0;
+    height: auto;
+    width: auto;
+    max-width: 30%;
+    font-size: 4px; }
+    @media (max-width: 775px) {
+      section.youtube .col-1 {
+        max-width: 40%; } }
+    @media (max-width: 640px) {
+      section.youtube .col-1 {
+        max-width: 100%; } }
+  section.youtube .caption {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    height: 50%; }
+  section.youtube .caption::before,
+  section.youtube .caption::after {
+    width: calc(100% - 10px);
+    position: absolute;
+    height: 50%;
+    color: #fff;
+    z-index: 1;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; }
+    @media (max-width: 640px) {
+      section.youtube .caption::before,
+      section.youtube .caption::after {
+        display: none; } }
+  section.youtube .caption::after {
+    content: attr(data-title);
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 6em;
+    padding: 10px 0 0 20px;
+    font-weight: 300;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  section.youtube .caption::before {
+    content: attr(data-description);
+    top: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 4em;
+    padding: 20px 0 0 5%;
+    color: #141414;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
+  section.youtube .caption img {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease-in-out; }
+  section.youtube .caption:hover img {
+    opacity: 0.5;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%); }
+    @media (max-width: 640px) {
+      section.youtube .caption:hover img {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0); } }
+  section.youtube .caption:hover::before,
+  section.youtube .caption:hover::after {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
   section.youtube .flex-video {
     box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.4);
@@ -622,23 +697,13 @@ section.youtube {
       section.youtube .flex-video {
         -webkit-transform: scale(1);
                 transform: scale(1); } }
-  section.youtube .col-1 {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center; }
     @media (max-width: 640px) {
-      section.youtube .col-1 {
+      section.youtube .flex-video {
         height: auto;
         display: block;
         padding: 50px 20px;
         width: auto; }
-        section.youtube .col-1:last-child {
+        section.youtube .flex-video:last-child {
           padding: 0px 20px 50px; } }
 
 section.mentoring {

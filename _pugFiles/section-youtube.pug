@@ -1,5 +1,18 @@
+mixin rec(name, desc, url)
+  a(href="",
+    data-title!=name
+    data-description!=desc
+    ).caption
+    img(src!=url alt="Illustration of Smug Eagle")
+
 section.youtube
-  .flex.flex--space-around
+  .flex.flex--center.work-header
     .col-1
       h2 Work
+  .flex.flex--center.work
     .col-1
+      +rec("Cupcakes da caca", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work1.jpg")
+      +rec("Tommy hillfighr", "Tommy é uma marca show", "{{ site.baseurl }}assets/img/work3.jpg")
+    .col-1
+      +rec("Marlboro", "Marlboro é show", "{{ site.baseurl }}assets/img/work3.jpg")
+      +rec("Cupcakes da caca", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work1.jpg")

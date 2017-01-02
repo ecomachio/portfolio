@@ -132,7 +132,9 @@ function startMentoring(){
 function youtubeVidScroll(){
   var yScroll = $(window).scrollTop();
 
-  $('.video-strip').css('background-position', 'center -'+ yScroll +'px');
+  if(yScroll > $('.work').offset().top){
+    console.log('hi');
+  }
 
 }
 
