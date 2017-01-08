@@ -1,18 +1,15 @@
 mixin rec(name, desc, url)
-  a(href="",
-    data-title!=name
-    data-description!=desc
-    ).caption
-    .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + url + ") ")
-      h2 name
+  .col-50
+    a(href="")
+      .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + url + ") ",
+      data-title!=name
+      data-description!=desc
+      ).workRec
 
 section.youtube
   .flex.flex--center.work-header
     h2 Work
   .flex.flex--center.work
-    .col-1
-      +rec("Cupcakes da caca", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work1.jpg")
-      +rec("Tommy hillfighr", "Tommy é uma marca show", "{{ site.baseurl }}assets/img/work3.jpg")
-    .col-1
-      +rec("Marlboro", "Marlboro é show", "{{ site.baseurl }}assets/img/work3.jpg")
-      +rec("Cupcakes da caca", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work1.jpg")
+    +rec("Calistenia App", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work1.png")
+    +rec("Cupcakes da caca", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work22.jpg")
+    

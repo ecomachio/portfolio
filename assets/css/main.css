@@ -493,8 +493,7 @@ input[type="button"] {
   margin: 0 10px; }
 
 .col-50 {
-  width: 50%;
-  background: #F012BE; }
+  width: 50%; }
 
 .push-rigth {
   margin-left: 330px; }
@@ -597,6 +596,9 @@ section.youtube {
   background: #141414;
   position: relative;
   font-family: 'Avenirltstd heavy'; }
+  section.youtube .work {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
   section.youtube .lead-line {
     position: absolute;
     top: 20%;
@@ -623,26 +625,61 @@ section.youtube {
     @media (max-width: 640px) {
       section.youtube .video-strip {
         display: none; } }
-  section.youtube .col-1 {
-    margin: 0;
-    height: auto;
-    width: auto;
+  section.youtube .col-50 {
+    height: 50%;
     min-width: 30%;
     font-size: 4px;
-    height: 300px; }
+    height: 50vh; }
     @media (max-width: 775px) {
-      section.youtube .col-1 {
+      section.youtube .col-50 {
         min-width: 40%; } }
     @media (max-width: 640px) {
-      section.youtube .col-1 {
+      section.youtube .col-50 {
         max-width: 100%; } }
-    section.youtube .col-1 a .img-aux {
+    section.youtube .col-50 a .img-aux {
+      position: relative;
       height: 100%;
       width: 100%;
       background-size: cover;
-      color: #fff; }
-      section.youtube .col-1 a .img-aux h2 {
+      background-position: center;
+      color: #fff;
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
+      transition: all 0.3s ease-in-out;
+      opacity: 0; }
+      section.youtube .col-50 a .img-aux h2 {
         opacity: 1; }
+      section.youtube .col-50 a .img-aux::after, section.youtube .col-50 a .img-aux::before {
+        position: absolute; }
+      section.youtube .col-50 a .img-aux::before {
+        padding: 0 0 0 20px;
+        font-size: 10em;
+        color: #fff;
+        content: attr(data-title);
+        top: 3%;
+        height: 20%;
+        width: calc(100% - 20px); }
+      section.youtube .col-50 a .img-aux::after {
+        margin: 0 0 0 20px;
+        top: calc(10% + 10em);
+        content: "";
+        width: 20%;
+        height: auto;
+        border-bottom: 2px solid #fff; }
+      section.youtube .col-50 a .img-aux.come-in {
+        -webkit-transform: translateY(30vh);
+                transform: translateY(30vh);
+        opacity: 0;
+        -webkit-animation: come-in 1.0s ease forwards;
+                animation: come-in 1.0s ease forwards; }
+      section.youtube .col-50 a .img-aux.come-in-slow {
+        -webkit-transform: translateY(30vh);
+                transform: translateY(30vh);
+        opacity: 0;
+        -webkit-animation: come-in 1.0s ease forwards;
+                animation: come-in 1.0s ease forwards;
+        -webkit-animation-delay: .2s;
+                animation-delay: .2s; }
   section.youtube .flex-video {
     box-shadow: 0px 4px 40px 3px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.4);
@@ -659,6 +696,18 @@ section.youtube {
         width: auto; }
         section.youtube .flex-video:last-child {
           padding: 0px 20px 50px; } }
+
+@-webkit-keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes come-in {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; } }
 
 section.mentoring {
   background-size: cover;

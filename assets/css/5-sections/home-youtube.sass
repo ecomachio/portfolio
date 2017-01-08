@@ -10,6 +10,9 @@ section.youtube
   position: relative
   font-family: 'Avenirltstd heavy'
 
+  .work
+    flex-wrap: wrap
+
   .lead-line
     position: absolute
     top: 20%
@@ -42,27 +45,63 @@ section.youtube
     @media(max-width: 640px)
       display: none
 
-  .col-1
-    margin: 0
-    height: auto
-    width: auto
+  .col-50
+    height: 50%
     min-width: 30%
     font-size: 4px
-    height: 300px
+    height: 50vh
     @media(max-width: 775px)
       min-width: 40%
     @media(max-width: 640px)
       max-width: 100%
 
-    a .img-aux
-      height: 100%
-      width: 100%
-      background:
-        size: cover        
-      color: $primary
+    a
+      .img-aux
+        position: relative
+        height: 100%
+        width: 100%
+        background:
+          size: cover
+          position: center
+        color: $primary
+        transform: translateX(-20px)
+        transition: all 0.3s ease-in-out
+        opacity: 0
 
-      h2
-        opacity: 1
+        h2
+          opacity: 1
+
+        &::after,
+        &::before
+          position: absolute
+
+        &::before
+          padding: 0 0 0 20px
+          font-size: 10em
+          color: $primary
+          content: attr(data-title)
+          top: 3%
+          height: 20%
+          width: calc(100% - 20px)
+
+        &::after
+          margin:  0 0 0 20px
+          top: calc(10% + 10em)
+          content: ""
+          width: 20%
+          height: auto
+          border-bottom: 2px solid $primary
+
+        &.come-in
+          transform: translateY(30vh)
+          opacity: 0
+          animation: come-in 1.0s ease forwards
+
+        &.come-in-slow
+          transform: translateY(30vh)
+          opacity: 0
+          animation: come-in 1.0s ease forwards
+          animation-delay: .2s
 
   .flex-video
     box-shadow: 0px 4px 40px 3px rgba(0,0,0,0.5)
@@ -79,3 +118,8 @@ section.youtube
 
       &:last-child
         padding: 0px 20px 50px
+
+@keyframes come-in
+  to
+    transform: translateY(0)
+    opacity: 1

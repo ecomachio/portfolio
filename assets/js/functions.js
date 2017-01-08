@@ -1,5 +1,18 @@
+var win = $(window);
+
+var allMods;
+
 $( document ).ready(function() {
   mentoringBubbleClick();
+
+  allMods = $('.workRec');
+
+  allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("already-visible");
+    }
+  });
 });
 
 function parallaxAbout() {
@@ -20,21 +33,11 @@ function parallaxAbout() {
 }
 
 $(window).scroll(function(){
-  youtubeVidScroll();
+  workLandingElements();
   startMentoring();
-  //teste();
-  horizontalScroll();
+  //teste();  
   parallaxAbout();
 });
-
-function horizontalScroll() {
-  var headerWidth = $('header').width();
-  var nb_entities = $('section').length;
-  var widthWindow = $(window).width() - headerWidth;
-  var leftValue;
-  var hScroll = $(window).scrollLeft();
-
-}
 
 function mentoringBubbleClick(){
 
@@ -63,61 +66,13 @@ $('.face').on('click', function(){
   $(this).addClass('has-bubble-open')
   .siblings().removeClass('has-bubble-open');
 });
+
 function showBubble(){
 }
 
 $(window).scroll(function(){
-  youtubeVidScroll();
+  workLandingElements();
   startMentoring();
-  //teste();
-});
-
-function teste(){
-  var nb_entities = $('.home-sections').length;
-
-  var gap_entites = 20; // gap de scroll entre entites en vh
-  var vh = $(window).height();
-  var th = $('body').height();
-  var st = $(window).scrollTop();
-  var avancee = st + vh - (th - (nb_entities)*vh - (nb_entities-1)*gap_entites*vh/100); // avanc�e de scroll �
-
-  console.log("scrollTop = %d", (nb_entities));
-  console.log("windowH = %d", ($(window).height()));
-  console.log("res = %d", (avancee));
-
-  $('.home-sections').each(function(index) {
-    if (avancee<=0) {
-      // pas encore visible
-      $(this).css('top','100vh');
-      $(this).removeClass('visible');
-    }
-    else if (avancee >= vh) {
-      // totalement up
-      $(this).css('top',0);
-      avancee -= vh;
-      avancee -= vh * gap_entites / 100;
-      if (avancee < vh) {
-        $(this).addClass('visible');
-        active_idx = index+1;
-      }
-      else
-        $(this).removeClass('visible');
-    }
-    else {
-      // partiellement visible
-      $(this).css('top',Math.floor(vh-avancee)+'px');
-      if (avancee>=vh/2)
-        active_idx = index+1;
-      avancee = 0;
-      $(this).addClass('visible');
-    }
-  });
-
-  $('.youtube').css('top',Math.floor(vh-avancee)+'px');
-}
-
-$(window).resize(function(){
-  //startFullScreen();
 });
 
 function startMentoring(){
@@ -129,14 +84,50 @@ function startMentoring(){
 
 }
 
-function youtubeVidScroll(){
-  var yScroll = $(window).scrollTop();
+function workLandingElements(){
 
-  if(yScroll > $('.work').offset().top){
-    console.log('hi');
-  }
+  allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      if(i % 2 == 0)
+        el.addClass("come-in");
+      else
+        el.addClass("come-in-slow");
+    }
+  });
 
 }
+
+(function($) {
+
+  /**
+   * Copyright 2012, Digital Fusion
+   * Licensed under the MIT license.
+   * http://teamdf.com/jquery-plugins/license/
+   *
+   * @author Sam Sehnert
+   * @desc A small plugin that checks whether elements are within
+   *     the user visible viewport of a web browser.
+   *     only accounts for vertical position, not horizontal.
+   */
+
+  $.fn.visible = function(partial) {
+
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          _bottom       = _top + $t.height(),
+          compareTop    = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom;
+
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+  };
+
+})(jQuery);
+
 
 /*
 Função scroll desativada horizontalScroll
