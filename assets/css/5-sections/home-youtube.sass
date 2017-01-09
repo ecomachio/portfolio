@@ -25,6 +25,7 @@ section.youtube
     padding: 5% 0
 
   h2
+    text-align: center
     color: $primary
     margin: 0
 
@@ -67,6 +68,24 @@ section.youtube
         transform: translateX(-20px)
         transition: all 0.3s ease-in-out
         opacity: 0
+        overflow: hidden
+
+        .caption
+          padding: 0 0 0 20px
+          color: $primary
+          font-size: 7em
+          position: absolute
+          top: 15%
+          opacity: 1
+          height: 15%
+          width: calc(100% - 20px)
+          transition: all 0.4s ease-in-out
+          opacity: 0
+
+        &:hover .caption
+          transform: translateX(0)
+          opacity: 1
+          top: 22%
 
         h2
           opacity: 1
@@ -88,9 +107,13 @@ section.youtube
           margin:  0 0 0 20px
           top: calc(10% + 10em)
           content: ""
-          width: 20%
+          width: 15%
           height: auto
           border-bottom: 2px solid $primary
+
+        &:hover::after
+          width: calc(100% - 40px)
+          transition: all 0.5s ease-in-out
 
         &.come-in
           transform: translateY(30vh)

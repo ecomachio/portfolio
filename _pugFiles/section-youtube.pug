@@ -5,11 +5,11 @@ mixin rec(name, desc, url)
       data-title!=name
       data-description!=desc
       ).workRec
+        .caption=desc
 
 section.youtube
   .flex.flex--center.work-header
     h2 Work
   .flex.flex--center.work
-    +rec("Calistenia App", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work1.png")
-    +rec("Cupcakes da caca", "Cupcakes da caca que eu amo muito", "{{ site.baseurl }}assets/img/work22.jpg")
-    
+    +rec("Calistenia App", "Android app", "{{ site.baseurl }}assets/img/work1.png")
+    +rec("Cupcakes da caca", "Brand and website", "{{ site.baseurl }}assets/img/work22.jpg")
