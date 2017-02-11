@@ -13,7 +13,7 @@ section.youtube
   .flex.flex--center.work
     | {% for post in site.posts %}
     |   {% if post.type == "work" %}
-    +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}assets/img/d1.jpg", "{{ site.baseurl }}{{ post.url }}")
+    +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}assets/img/d1.jpg", "{{ post.url }}")
     |   {% endif %}
     | {% endfor %}
     +rec("Cupcakes da caca", "Brand and website", "{{ site.baseurl }}assets/img/work22.jpg")

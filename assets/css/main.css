@@ -510,26 +510,72 @@ input[type="button"] {
     margin-left: 10px; } }
 
 .post-wrapper {
-  background: #f4f4f4;
-  color: #141414; }
-  .post-wrapper .post-header {
+  background: #fdfdfd;
+  color: #141414;
+  position: relative; }
+  .post-wrapper .post-header, .post-wrapper .post-footer {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    height: 50vh;
+    height: 60vh;
     background: #141414;
     text-align: center;
     color: #fff; }
-    .post-wrapper .post-header h1, .post-wrapper .post-header h2, .post-wrapper .post-header h3, .post-wrapper .post-header h4, .post-wrapper .post-header h5, .post-wrapper .post-header h6, .post-wrapper .post-header p {
-      color: #fff; }
+    .post-wrapper .post-header h1, .post-wrapper .post-header h2, .post-wrapper .post-header h3, .post-wrapper .post-header h4, .post-wrapper .post-header h5, .post-wrapper .post-header h6, .post-wrapper .post-header p, .post-wrapper .post-footer h1, .post-wrapper .post-footer h2, .post-wrapper .post-footer h3, .post-wrapper .post-footer h4, .post-wrapper .post-footer h5, .post-wrapper .post-footer h6, .post-wrapper .post-footer p {
+      color: #fff;
+      transition: all 200ms ease-in-out; }
+  .post-wrapper .post-footer {
+    margin-top: 200px;
+    transition: all 500ms ease-in-out;
+    cursor: pointer; }
+    .post-wrapper .post-footer:hover {
+      background: #090909; }
+      .post-wrapper .post-footer:hover h2 {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05); }
   .post-wrapper .post-content {
     margin: 0 auto;
-    width: 60%; }
+    width: 60%;
+    text-align: justify; }
     .post-wrapper .post-content p {
       font-size: 135%; }
+    .post-wrapper .post-content blockquote {
+      margin-left: calc(-49vw + (100%/2));
+      margin-right: calc(-49vw + (100%/2));
+      margin-bottom: 0;
+      margin-top: 0;
+      text-align: center; }
+      .post-wrapper .post-content blockquote h4 {
+        text-align: center;
+        word-spacing: 5em;
+        padding: 80px;
+        margin-bottom: 0;
+        margin-top: 0;
+        background: #f5f5f5; }
+      .post-wrapper .post-content blockquote ul {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        list-style: none;
+        padding: 15px;
+        margin: 0;
+        background: #f5f5f5; }
+        .post-wrapper .post-content blockquote ul li {
+          padding: 2px; }
+          .post-wrapper .post-content blockquote ul li img {
+            max-width: 100%;
+            max-height: 700px; }
+  .post-wrapper .post-back {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    style: none;
+    color: #141414;
+    font-weight: bold; }
 
 section.about {
   color: #ddd;
