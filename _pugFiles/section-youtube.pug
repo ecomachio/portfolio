@@ -1,7 +1,7 @@
-mixin rec(name, desc, url)
+mixin rec(name, desc, image, url)
   .col-50
-    a(href="")
-      .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + url + ") ",
+    a(href!=url)
+      .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + image + ") ",
       data-title!=name
       data-description!=desc
       ).workRec
@@ -11,5 +11,9 @@ section.youtube
   .flex.flex--center.work-header
     h2 Work
   .flex.flex--center.work
-    +rec("Calistenia App", "Android app", "{{ site.baseurl }}assets/img/work1.png")
+    | {% for post in site.posts %}
+    |   {% if post.type == "work" %}
+    +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}assets/img/d1.jpg", "{{ post.url }}")
+    |   {% endif %}
+    | {% endfor %}
     +rec("Cupcakes da caca", "Brand and website", "{{ site.baseurl }}assets/img/work22.jpg")

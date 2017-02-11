@@ -13,7 +13,7 @@
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.0",
     "gulp-pug": "^3.2.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-sass": "^2.1.0"	
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
   "dependencies": {
-    "browser-sync": "^1.9.2"
+    "browser-sync": "^1.9.2",
+    "lodash": "^4.17.4"
   }
 }
