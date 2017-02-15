@@ -6,14 +6,23 @@ $( document ).ready(function() {
   mentoringBubbleClick();
 
   allMods = $('.workRec');
+  postMods = $('blockquote img');
+  postMods2 = $('blockquote p');
 
-  allMods.each(function(i, el) {
+  checkIfAlreadyVisible(allMods);
+  checkIfAlreadyVisible(postMods);
+  checkIfAlreadyVisible(postMods2);
+
+});
+
+function checkIfAlreadyVisible(arrayDom){
+  arrayDom.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
       el.addClass("already-visible");
     }
   });
-});
+}
 
 function parallaxAbout() {
 
@@ -33,9 +42,11 @@ function parallaxAbout() {
 }
 
 $(window).scroll(function(){
-  workLandingElements();
-  startMentoring();
-  //teste();  
+  workLandingElements(allMods);
+  workLandingElements(postMods);
+  workLandingElements(postMods2);
+  //startMentoring();
+  //teste();
   parallaxAbout();
 });
 
@@ -71,8 +82,8 @@ function showBubble(){
 }
 
 $(window).scroll(function(){
-  workLandingElements();
-  startMentoring();
+  //workLandingElements();
+  //startMentoring();
 });
 
 function startMentoring(){
@@ -84,11 +95,12 @@ function startMentoring(){
 
 }
 
-function workLandingElements(){
+function workLandingElements(arrayDom){
 
-  allMods.each(function(i, el) {
+  arrayDom.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
+      console.log(i);
       if(i % 2 == 0)
         el.addClass("come-in");
       else

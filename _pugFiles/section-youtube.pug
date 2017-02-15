@@ -12,8 +12,8 @@ section.youtube
     h2 Work
   .flex.flex--center.work
     | {% for post in site.posts %}
-    |   {% if post.type == "work" %}
-    +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}assets/img/d1.jpg", "{{ site.baseurl }}{{ post.url }}")
+    |   {% if post.type == "work" or post.type == "article" %}
+    +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}{{ post.images[0].url }}", "{{ site.baseurl }}{{ post.url }}")
     |   {% endif %}
     | {% endfor %}
-    +rec("Cupcakes da caca", "Brand and website", "{{ site.baseurl }}assets/img/work22.jpg")
+    +rec("Cupcakes da caca", "Brand and website", "{{ site.baseurl }}/assets/img/work22.jpg")

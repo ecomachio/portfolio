@@ -10,13 +10,18 @@ layout: default
 <div class="post-content">
   {{ content }}
 </div>
-<a href="mailto:ediancomachio@hotmail.com">
-  <div class="post-footer">
-    <div class="post-footer-data">
-      <h2>Vamos conversar sobre o seu projeto?</h2>
+{% if page.comments %}
+  {% include disqus.html %}
+{% endif %}
+{% if page.type == "work" %}
+  <a href="mailto:ediancomachio@hotmail.com">
+    <div class="post-footer">
+      <div class="post-footer-data">
+        <h2>Vamos conversar sobre o seu projeto?</h2>
+      </div>
     </div>
-  </div>
-</a>
+  </a>
+{% endif %}
 <a href="{{ site.baseurl }}">
   <div class="post-back">
     Voltar

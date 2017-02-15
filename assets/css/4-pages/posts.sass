@@ -27,11 +27,24 @@
       h2
         transform: scale(1.05)
 
+  #disqus_thread
+    margin: 0 auto
+    width: 70%
+
   .post-content
     margin: 0 auto
     width: 60%
     text-align: justify
 
+    ul
+      padding: 10px
+
+    @media (max-width: 775px)
+      width: 85%
+      text-align: left
+      h1, h2
+        font-size: 2.5em
+        
     p
       font-size: 135%
 
@@ -41,6 +54,18 @@
       margin-bottom: 0
       margin-top: 0
       text-align: center
+
+      p
+        &.come-in
+          transform: translateY(30vh)
+          opacity: 0
+          animation: come-in 1.0s ease forwards
+
+        &.come-in-slow
+          transform: translateY(30vh)
+          opacity: 0
+          animation: come-in 1.0s ease forwards
+          animation-delay: .2s
 
       h4
         text-align: center
@@ -61,9 +86,19 @@
         li
           padding: 2px
 
-          img
-            max-width: 100%
-            max-height: 700px
+      img
+        max-width: 100%
+        max-height: 700px
+        &.come-in
+          transform: translateY(30vh)
+          opacity: 0
+          animation: come-in 1.0s ease forwards
+
+        &.come-in-slow
+          transform: translateY(30vh)
+          opacity: 0
+          animation: come-in 1.0s ease forwards
+          animation-delay: .2s
 
 
   .post-back
