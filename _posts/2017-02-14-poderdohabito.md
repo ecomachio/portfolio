@@ -8,7 +8,7 @@ title:  "Poder do hábito"
 date:   2017-02-14 23:11:03
 categories: lifestyle
 images:
-  - url: /assets/img/poh1.jpg
+  - url: /assets/img/poh.jpg
   - alt: habit loop
   - title: habit loop
 
