@@ -1,22 +1,22 @@
 mixin rec(name, desc, image, url)
   .col-50
     a(href!=url)
-      .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(" + image + ") ",
+      .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url(" + image + ") ",
       data-title!=name
       data-description!=desc
       ).workRec
         .caption=desc
 
-section.youtube
+section.articles
   .flex.work-header
-    h2 Projetos
-    p Seleção de projetos web, aplicativos e design.
+    h2 Artigos
+    p Seleção artigos sobre tecnologia e outros temas.
   .flex.flex--center.work
     | {% for post in site.posts %}
-    |   {% if post.type == "work" %}
+    |   {% if post.type == "article" %}
     +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}{{ post.images[0].url }}", "{{ site.baseurl }}{{ post.url }}")
     |   {% endif %}
     | {% endfor %}
-    .col-50
+    .col-50.fake
       a
-        .img-aux(style=" background: #333", data-title="Isso é um retângulo").workRec.caption=""
+        .img-aux(style=" background: #999", data-title="Isso é um retângulo").workRec.caption=""

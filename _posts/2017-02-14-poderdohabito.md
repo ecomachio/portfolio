@@ -4,7 +4,7 @@ name:   "Poder do hábito"
 comments: true
 about:  "lifestyle"
 type:   "article"
-title:  "Poder do hábito"
+title:  "O Poder do Hábito"
 date:   2017-02-14 23:11:03
 categories: lifestyle
 images:
@@ -37,7 +37,7 @@ Recompensa é a recompensa (?). Pode ser uma sensação de tranquilidade provida
 blá blá blá, por que isso me interessa?
 ---------------------------------------
 
-A seguir a **fórmula secreta** para mudar os hábitos, que está no livro e na internet:  
+Por que hábitos não exigem força de vontade, ou seja, você poderá melhorar sua vida sem precisar de disciplina militar.
 
 Vamos supor que parar de comer besteira durante o expediente.
 

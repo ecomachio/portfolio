@@ -3,7 +3,7 @@ var win = $(window);
 var allMods;
 
 $( document ).ready(function() {
-  mentoringBubbleClick();
+  articlesBubbleClick();
 
   allMods = $('.workRec');
   postMods = $('blockquote img');
@@ -41,16 +41,21 @@ function parallaxAbout() {
 
 }
 
+function parallaxYoutube(){
+
+}
+
 $(window).scroll(function(){
   workLandingElements(allMods);
   workLandingElements(postMods);
   workLandingElements(postMods2);
-  //startMentoring();
+  //startarticles();
   //teste();
   parallaxAbout();
+  parallaxYoutube();
 });
 
-function mentoringBubbleClick(){
+function articlesBubbleClick(){
 
   if($(window).width() > 640){
     showBubble();
@@ -83,13 +88,13 @@ function showBubble(){
 
 $(window).scroll(function(){
   //workLandingElements();
-  //startMentoring();
+  //startarticles();
 });
 
-function startMentoring(){
+function startarticles(){
 
   var wScroll = $(window).scrollTop();
-  if($('section.mentoring').offset().top - 500 < wScroll){
+  if($('section.articles').offset().top - 500 < wScroll){
     $('.faces').addClass('launched');
   }
 
@@ -100,7 +105,6 @@ function workLandingElements(arrayDom){
   arrayDom.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
-      console.log(i);
       if(i % 2 == 0)
         el.addClass("come-in");
       else
@@ -170,7 +174,7 @@ $(function() {
           $(this).addClass('locked');
         }
 
-        //$('.mentoring').css('left', leftValue + 'px');
+        //$('.articles').css('left', leftValue + 'px');
 
       });
 
