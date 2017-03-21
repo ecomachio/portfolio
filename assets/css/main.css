@@ -661,19 +661,20 @@ input[type="button"] {
           padding: 2px; }
       .post-wrapper .post-content blockquote img {
         max-width: 100%;
-        max-height: 700px; }
+        max-height: 700px;
+        opacity: 0; }
         .post-wrapper .post-content blockquote img.come-in {
           -webkit-transform: translateY(30vh);
               -ms-transform: translateY(30vh);
                   transform: translateY(30vh);
-          opacity: 0;
+          opacity: 1;
           -webkit-animation: come-in 1.0s ease forwards;
                   animation: come-in 1.0s ease forwards; }
         .post-wrapper .post-content blockquote img.come-in-slow {
           -webkit-transform: translateY(30vh);
               -ms-transform: translateY(30vh);
                   transform: translateY(30vh);
-          opacity: 0;
+          opacity: 1;
           -webkit-animation: come-in 1.0s ease forwards;
                   animation: come-in 1.0s ease forwards;
           -webkit-animation-delay: .2s;
