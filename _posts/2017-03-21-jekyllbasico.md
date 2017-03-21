@@ -1,24 +1,24 @@
 ---
 layout: post
-name:   "Jekyll - Básico"
+name:   "Jekyll Tutorial"
 comments: true
-about:  "Tecnologia"
+about:  "Parte 1"
 type:   "article"
-title:  "Jekyll - Básico"
+title:  "Jekyll Tutorial - Parte 1"
 date:   2017-02-14 23:11:03
 categories: Front-end
 images:
   - url: /assets/img/jekylllogo.png
   - alt: jekyll basics
   - title: jekyll basics
- 
+
 ---
 
 ## O que é Jekyll?   
 
 Jekyll é um gerador de sites estáticos. Funciona assim:
 
-Você tem o seu template e o seu conteudo:
+Você tem o seu template e o seu conteúdo:
 
  >
   ![Jekyll template]({{ site.baseurl }}/assets/img/jekylltemplateandcontent.png "jekyll template")
@@ -28,7 +28,7 @@ O Jekyll pega o seu conteúdo e encaixa no seu template. E o resultado são pág
  >
   ![Jekyll build]({{ site.baseurl }}/assets/img/jekyllbuild.png "jekyll build")
 
-O resultado da exportação Jekyll já é publicavel! Agora é só publicar o seu site. Easy life easy money.
+O resultado da exportação Jekyll já é publicável! Agora é só publicar o seu site. Easy money easy life.
 
  >
   ![Jekyll publish]({{ site.baseurl }}/assets/img/jekyllpublish.png "jekyll publish")
@@ -56,14 +56,14 @@ Sites gerados via Jekyll  são suportados pelo serviço github pages
 Jekyll suporta posts escritos em markdown
 
 **6. Barato**
-Como não necessita banco de dados é uma serviço a menos para pagar, além, é claro, da hospodegem via github pages.
+Como não necessita banco de dados é uma serviço a menos para pagar, além, é claro, da hospedagem via github pages.
 
 ### Instalando Jekyll
-  
+
 Pra você que gosta de ctrl+c ctrl+v
- 
+
  ```command
- gem install jekyll bundler 
+ gem install jekyll bundler
  ```
  ```command
  jekyll -v
@@ -78,12 +78,12 @@ Pra você que gosta de ctrl+c ctrl+v
 #### Detalhes da instalação
 
 Para instalar o jekyll você precisa ter ruby instalado. Para instalar ruby clique aqui.
- 
- Com o ruby instalado rode os seguintes comandos: 
- 
+
+ Com o ruby instalado rode os seguintes comandos:
+
  Instalação jekyll:
  ```command
- gem install jekyll bundler 
+ gem install jekyll bundler
  ```
  >
   ![teste]({{ site.baseurl }}/assets/img/jekylldownload.gif "jekyll download")
@@ -102,8 +102,8 @@ Iniciando um novo projeto
 
 >
  ![teste]({{ site.baseurl }}/assets/img/jekyllnew.png "jekyll new")
- 
-Sobe um servidor local. Deve ser rodado dentro da dasta do projeto criado acima
+
+Sobe um servidor local. Deve ser rodado dentro da pasta do projeto criado acima
 ```command
  jekyll serve
  ```
@@ -111,6 +111,3 @@ Sobe um servidor local. Deve ser rodado dentro da dasta do projeto criado acima
   ![jekyll serve]({{ site.baseurl }}/assets/img/jekyllserve.gif "jekyll serve")  
 
 Agora o servidor jekyll pode ser acessado através do endereço **localhost:4000**
-  
- 
- 

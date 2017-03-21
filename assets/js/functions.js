@@ -3,6 +3,7 @@ var win = $(window);
 var allMods;
 
 $( document ).ready(function() {
+
   articlesBubbleClick();
 
   allMods = $('.workRec');
