@@ -2,11 +2,11 @@
 layout: post
 name:   "Jekyll - Básico"
 comments: true
-about:  "webdev"
+about:  "Tecnologia"
 type:   "article"
 title:  "Jekyll - Básico"
 date:   2017-02-14 23:11:03
-categories: webdev
+categories: Front-end
 images:
   - url: /assets/img/jekylllogo.png
   - alt: jekyll basics

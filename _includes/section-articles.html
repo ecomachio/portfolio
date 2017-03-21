@@ -1,3 +1,6 @@
 <section class="articles"><div class="flex work-header"><h2>Artigos</h2><p>Seleção artigos sobre tecnologia e outros temas.</p></div><div class="flex flex--center work">{% for post in site.posts %} 
-  {% if post.type == "article" %}<div class="col-50"><a href="{{ site.baseurl }}{{ post.url }}"><div class="img-aux workRec" style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url({{ site.baseurl }}{{ post.images[0].url }}) " data-title="{{ post.name }}" data-description="{{ post.about }}"><div class="caption">{{ post.about }}</div></div></a></div>  {% endif %}
-{% endfor %}<div class="col-50 fake"><a><div class="img-aux workRec caption" style=" background: #999" data-title="Isso é um retângulo"></div></a></div></div></section>
+  {% if post.type == "article" %}<div class="col-50"><a href="{{ site.baseurl }}{{ post.url }}"><div class="img-aux workRec" style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url({{ site.baseurl }}{{ post.images[0].url }}) " data-title="{{ post.name }}" data-description="{{ post.about }}"><div class="caption">{{ post.about }}</div></div></a></div>{% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
+  {% endif %}
+{% endfor %}  
+{% assign odd = post_count | modulo: 2 %}            
+{% if odd != 0 %}<div class="col-50 fake"><a><div class="img-aux workRec caption" style=" background: #999" data-title="Isso é um retângulo"></div></a></div>{% endif %}</div></section>
