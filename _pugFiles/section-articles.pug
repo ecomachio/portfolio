@@ -12,7 +12,7 @@ section.articles
     h2 Artigos
     p Seleção artigos sobre tecnologia e outros temas.
   .flex.flex--center.work
-    | {% for post in site.posts %}
+    | {% for post in site.posts %} 
     |   {% if post.type == "article" %}
     +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}{{ post.images[0].url }}", "{{ site.baseurl }}{{ post.url }}")
     |   {% endif %}
