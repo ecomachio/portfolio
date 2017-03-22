@@ -1,4 +1,4 @@
-name: Edian Comachio
+name: Edian Comachio ESC
 markdown: kramdown
 highlighter: rouge # pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
@@ -7,3 +7,8 @@ baseurl: /portfolio/
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+gems:
+  - jekyll-seo-tag
+
+google_verify: Wv_NNL-kitScKcmTiw_KGnwLEI2cbuPqiPkNKQd-zlk

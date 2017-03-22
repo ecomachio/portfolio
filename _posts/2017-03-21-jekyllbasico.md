@@ -6,12 +6,18 @@ about:  "Parte 1"
 type:   "article"
 title:  "Jekyll Tutorial - Parte 1"
 date:   2017-02-14 23:11:03
+description: Tutorial Jekyll como instalar e usar jekyll para seu blog ou site
 categories: Front-end
 images:
   - url: /assets/img/jekylllogo.png
   - alt: jekyll basics
   - title: jekyll basics
-
+social:
+  name: Edian Comachio
+  links:
+    - https://www.facebook.com/edian.comachio    
+    - https://www.linkedin.com/in/edian-comachio-4074b213b/    
+    - https://github.com/ecomachio    
 ---
 
 ## O que é Jekyll?   

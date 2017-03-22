@@ -6,12 +6,18 @@ about:  "lifestyle"
 type:   "article"
 title:  "O Poder do Hábito"
 date:   2017-02-14 23:11:03
+description: Poder do habito simples passo a passo para mudar seus hábitos
 categories: lifestyle
 images:
   - url: /assets/img/poh.jpg
   - alt: habit loop
   - title: habit loop
-
+social:
+  name: Edian Comachio
+  links:
+    - https://www.facebook.com/edian.comachio    
+    - https://www.linkedin.com/in/edian-comachio-4074b213b/    
+    - https://github.com/ecomachio    
 
 ---
 
