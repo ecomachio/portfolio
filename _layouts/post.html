@@ -66,7 +66,7 @@ new KudosPlease({
       <div class="postgrid">
         <div class="col-25 relatedArticle">
           <a href="{{ site.baseurl }}{{ post.url }}">
-          <div class="img-aux workRec come-in" style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url({{ post.images[0].url }}) " data-title="{{ post.name }}" data-description="{{ post.about }}">
+          <div class="img-aux workRec come-in" style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url({{ site.baseurl }}{{ post.images[0].url }}) " data-title="{{ post.name }}" data-description="{{ post.about }}">
             <div class="caption">{{ post.about }}</div>
             </div>
           </a>
