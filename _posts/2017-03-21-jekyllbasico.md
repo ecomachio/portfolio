@@ -1,11 +1,11 @@
 ---
 layout: post
-name:   "Jekyll Tutorial"
+name:   "Jekyll - Parte 1"
 comments: true
-about:  "Parte 1"
+about:  "Tutorial"
 type:   "article"
-title:  "Jekyll Tutorial - Parte 1"
-date:   2017-02-14 23:11:03
+title:  "Jekyll - Parte 1"
+date:   2017-03-21 23:11:03
 description: Tutorial Jekyll como instalar e usar jekyll para seu blog ou site
 categories: Front-end
 images:

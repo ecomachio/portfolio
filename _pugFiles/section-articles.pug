@@ -1,5 +1,5 @@
 mixin rec(name, desc, image, url)
-  .col-50
+  .col-25
     a(href!=url)
       .img-aux(style=" background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url(" + image + ") ",
       data-title!=name
@@ -20,7 +20,4 @@ section.articles
     | {% endfor %}
     |{% assign odd = post_count | modulo: 2 %}
     |{% if odd != 0 %}
-    .col-50.fake
-      a
-        .img-aux(style=" background: #999", data-title="Isso é um retângulo").workRec.caption=""
     |{% endif %}
