@@ -575,6 +575,110 @@ input[type="button"] {
       color: #fff;
       -webkit-transition: all 200ms ease-in-out;
       transition: all 200ms ease-in-out; }
+  .post-wrapper .relatedPosts {
+    height: 50vh;
+    background: #141414;
+    color: #fff;
+    padding: 0 0 0 15%; }
+    .post-wrapper .relatedPosts h1, .post-wrapper .relatedPosts h2, .post-wrapper .relatedPosts h3, .post-wrapper .relatedPosts h4, .post-wrapper .relatedPosts h5, .post-wrapper .relatedPosts h6, .post-wrapper .relatedPosts p {
+      color: #fff;
+      -webkit-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out; }
+    .post-wrapper .relatedPosts .relatedPostsHeader {
+      width: 100%;
+      padding-top: 2%; }
+    .post-wrapper .relatedPosts .postgrid {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      min-width: 25%;
+      font-size: 2.7px;
+      height: 35vh; }
+      @media (max-width: 775px) {
+        .post-wrapper .relatedPosts .postgrid {
+          min-width: 40%; } }
+      @media (max-width: 640px) {
+        .post-wrapper .relatedPosts .postgrid {
+          max-width: 50%; } }
+      @media (max-width: 1200px) {
+        .post-wrapper .relatedPosts .postgrid {
+          min-width: 50%; } }
+      .post-wrapper .relatedPosts .postgrid a .img-aux {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        -webkit-transform: translateX(-20px);
+            -ms-transform: translateX(-20px);
+                transform: translateX(-20px);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        overflow: hidden; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux .caption {
+          padding: 0 0 0 20px;
+          color: #fff;
+          font-size: 8.5em;
+          position: absolute;
+          top: 15%;
+          opacity: 1;
+          height: 15%;
+          width: -webkit-calc(100% - 20px);
+          width: calc(100% - 20px);
+          -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          opacity: 0; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux:hover .caption {
+          -webkit-transform: translateX(0);
+              -ms-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+          top: 22%; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux h2 {
+          opacity: 1; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux::after, .post-wrapper .relatedPosts .postgrid a .img-aux::before {
+          position: absolute; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux::before {
+          padding: 0 0 0 20px;
+          font-size: 10em;
+          color: #fff;
+          content: attr(data-title);
+          top: 3%;
+          height: 20%;
+          width: -webkit-calc(100% - 20px);
+          width: calc(100% - 20px); }
+        .post-wrapper .relatedPosts .postgrid a .img-aux::after {
+          margin: 0 0 0 20px;
+          top: -webkit-calc(10% + 10em);
+          top: calc(10% + 10em);
+          content: "";
+          width: 15%;
+          height: auto;
+          border-bottom: 2px solid #fff; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux:hover::after {
+          width: -webkit-calc(100% - 40px);
+          width: calc(100% - 40px);
+          -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux.come-in {
+          -webkit-transform: translateY(30vh);
+              -ms-transform: translateY(30vh);
+                  transform: translateY(30vh);
+          opacity: 0;
+          -webkit-animation: come-in 1.0s ease forwards;
+                  animation: come-in 1.0s ease forwards; }
+        .post-wrapper .relatedPosts .postgrid a .img-aux.come-in-slow {
+          -webkit-transform: translateY(30vh);
+              -ms-transform: translateY(30vh);
+                  transform: translateY(30vh);
+          opacity: 0;
+          -webkit-animation: come-in 1.0s ease forwards;
+                  animation: come-in 1.0s ease forwards;
+          -webkit-animation-delay: .2s;
+                  animation-delay: .2s; }
   .post-wrapper .post-footer {
     margin-top: 100px;
     -webkit-transition: all 500ms ease-in-out;

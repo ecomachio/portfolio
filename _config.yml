@@ -8,7 +8,6 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-gems:
-  - jekyll-seo-tag
+gems: ['jekyll-seo-tag']
 
 google_verify: Wv_NNL-kitScKcmTiw_KGnwLEI2cbuPqiPkNKQd-zlk

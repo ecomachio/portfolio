@@ -7,7 +7,8 @@ type:   "article"
 title:  "O Poder do Hábito"
 date:   2017-02-14 23:11:03
 description: Poder do habito simples passo a passo para mudar seus hábitos
-categories: lifestyle
+categories: 
+  - lifestyle
 images:
   - url: /assets/img/poh.jpg
   - alt: habit loop

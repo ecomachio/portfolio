@@ -7,7 +7,10 @@ type:   "article"
 title:  "Jekyll - Parte 1"
 date:   2017-03-21 23:11:03
 description: Tutorial Jekyll como instalar e usar jekyll para seu blog ou site
-categories: Front-end
+categories: 
+  - tecnologia 
+  - jekyll 
+  - web
 images:
   - url: /assets/img/jekylllogo.png
   - alt: jekyll basics

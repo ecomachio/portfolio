@@ -3,7 +3,7 @@
   color: $secondary
   position: relative
 
-  .post-header, .post-footer
+  .post-header, .post-footer, 
     display: flex
     justify-content: center
     align-items: center
@@ -16,6 +16,102 @@
       color: $primary
       transition: all 200ms ease-in-out
 
+  .relatedPosts        
+    height: 50vh
+    background: $secondary
+    color: $primary    
+    padding: 0 0 0 15%
+    h1, h2, h3, h4, h5, h6, p
+      color: $primary
+      transition: all 200ms ease-in-out
+    
+    .relatedPostsHeader
+      width: 100%   
+      padding-top: 2%
+
+    .postgrid        
+      display: flex
+      width: 100%    
+
+      .relatedArticle
+      min-width: 25%      
+      font-size: 2.7px
+      height: 35vh
+      @media(max-width: 775px)
+        min-width: 40%
+      @media(max-width: 640px)
+        max-width: 50%
+      @media(max-width: 1200px)
+        min-width: 50%
+      a
+        .img-aux
+          position: relative
+          height: 100%
+          width: 100%
+          background:
+            size: cover
+            position: center
+          transform: translateX(-20px)
+          transition: all 0.3s ease-in-out
+          opacity: 0
+          overflow: hidden
+  
+          .caption
+            padding: 0 0 0 20px
+            color: $primary
+            font-size: 8.5em
+            position: absolute
+            top: 15%
+            opacity: 1
+            height: 15%
+            width: calc(100% - 20px)
+            transition: all 0.4s ease-in-out
+            opacity: 0
+
+          &:hover .caption
+            transform: translateX(0)
+            opacity: 1
+            top: 22%
+
+          h2
+            opacity: 1
+
+          &::after,
+          &::before
+            position: absolute
+
+          &::before
+            padding: 0 0 0 20px
+            font-size: 10em
+            color: $primary
+            content: attr(data-title)
+            top: 3%
+            height: 20%
+            width: calc(100% - 20px)
+
+          &::after
+            margin:  0 0 0 20px
+            top: calc(10% + 10em)
+            content: ""
+            width: 15%
+            height: auto
+            border-bottom: 2px solid $primary
+  
+          &:hover::after
+            width: calc(100% - 40px)
+            transition: all 0.5s ease-in-out
+  
+          &.come-in
+            transform: translateY(30vh)
+            opacity: 0
+            animation: come-in 1.0s ease forwards
+  
+          &.come-in-slow
+            transform: translateY(30vh)
+            opacity: 0
+            animation: come-in 1.0s ease forwards
+            animation-delay: .2s
+  
   .post-footer
     margin-top: 100px
     transition: all 500ms ease-in-out
