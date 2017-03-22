@@ -1,18 +1,34 @@
 ---
 layout: default
 ---
+<script>
+new KudosPlease({
+    el : '.kudos',
+    duration : 1500,
+    persistent : true,
+    status : {
+      alpha: '',
+      beta: '',
+      gamma: ''
+    }
+});
+</script>
+
 <div class="post-header">
   <div class="post-header-data">
     <h1>{{ page.title }}</h1>
     <!-- <p class="meta">{{ page.date | date_to_string }}</p> -->
+    {{ paginate_path }}
   </div>
 </div>
 <div class="post-content">
   {{ content }}
 </div>
+<div class="kudos" data-amount="0" data-url="localhost:3000{{ page.url }}"></div>
 {% if page.comments %}
   {% include disqus.html %}
 {% endif %}
+
 {% if page.type == "work" %}
   <a href="mailto:ediancomachio@hotmail.com">
     <div class="post-footer">

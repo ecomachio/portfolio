@@ -10,15 +10,15 @@ mixin rec(name, desc, image, url)
 section.articles
   .flex.work-header
     h2 Artigos
-    p Seleção artigos sobre tecnologia e outros temas.
+    p Seleção artigos sobre tecnologia e outros temas. 
   .flex.flex--center.work
-    | {% for post in site.posts %} 
+    | {% for post in site.posts %}
     |   {% if post.type == "article" %}
     +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}{{ post.images[0].url }}", "{{ site.baseurl }}{{ post.url }}")
     |{% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
     |   {% endif %}
-    | {% endfor %}  
-    |{% assign odd = post_count | modulo: 2 %}            
+    | {% endfor %}
+    |{% assign odd = post_count | modulo: 2 %}
     |{% if odd != 0 %}
     .col-50.fake
       a
