@@ -24,7 +24,7 @@ new KudosPlease({
 <div class="post-content">
   {{ content }}
 </div>
-<div class="kudos" data-amount="0" data-url="{{ baseurl }}{{ page.url }}"></div>
+<div class="kudos" data-amount="0" data-url="{{ layout.baseurl }}{{ page.url }}"></div>
 {% if page.comments %}
   {% include disqus.html %}
 {% endif %}
