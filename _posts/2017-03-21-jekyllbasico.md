@@ -103,7 +103,8 @@ Iniciando um novo projeto
 >
  ![teste]({{ site.baseurl }}/assets/img/jekyllnew.png "jekyll new")
 
-Sobe um servidor local. Deve ser rodado dentro da pasta do projeto criado acima
+Após iniciar um novo projeto, é só subir o servidor local. O servidor local simula um servidor web no seu computador, ou seja, é como se o site estivesse hospedado no seu próprio computador. Para subir o servidor execute:
+
 ```command
  jekyll serve
  ```

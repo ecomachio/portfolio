@@ -1,5 +1,6 @@
 ---
 layout: default
+baseurl: ecomachio.github.io/portifolio
 ---
 <script>
 new KudosPlease({
@@ -17,14 +18,13 @@ new KudosPlease({
 <div class="post-header">
   <div class="post-header-data">
     <h1>{{ page.title }}</h1>
-    <!-- <p class="meta">{{ page.date | date_to_string }}</p> -->
-    {{ paginate_path }}
+    <!-- <p class="meta">{{ page.date | date_to_string }}</p> -->    
   </div>
 </div>
 <div class="post-content">
   {{ content }}
 </div>
-<div class="kudos" data-amount="0" data-url="localhost:3000{{ page.url }}"></div>
+<div class="kudos" data-amount="0" data-url="{{ baseurl }}{{ page.url }}"></div>
 {% if page.comments %}
   {% include disqus.html %}
 {% endif %}
