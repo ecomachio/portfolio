@@ -23,7 +23,27 @@ social:
     - https://github.com/ecomachio    
 ---
 
-## O que é Jekyll?   
+## Estrutura e Funcionamento
 
 [Na parte 1 do tutorial Jekyll aprendemos a o que é o jekyll e como instalar.]({{ site.baseurl }}/tecnologia/jekyll/web/2017/03/21/jekyllbasico.html)
+
+Agora vamos conhecer a estrutura e o funcionamento do jekyll.
+
+### Estrutura
+
+A última parte do tutorial anterior subimos o servidor jekyll através do comando:
+
+```command
+ jekyll serve
+ ```
+
+O servidor está acessivel através do endereço localhost:4000 e deve estar parecido com isso:
+
+>
+ ![jekylllocalhost]({{ site.baseurl }}/assets/img/jekylllocalhost.png "jekyll localhost")
+
+
+
+
+
 
