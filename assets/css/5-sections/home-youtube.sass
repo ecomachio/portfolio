@@ -10,11 +10,12 @@ section.youtube
   position: relative
   font-family: 'Avenirltstd heavy'
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
-  
 
   .work
     flex-wrap: wrap
     margin: 0 10%
+    @media(max-width: 640px)
+      margin: 0 5%
 
   .lead-line
     position: absolute
@@ -30,6 +31,8 @@ section.youtube
     display: flex
     flex-direction: column
     align-items: flex-start
+    @media(max-width: 640px)
+      padding-top: 5%
 
     p
       margin: 15px 0
@@ -91,6 +94,8 @@ section.youtube
           width: calc(100% - 20px)
           transition: all 0.4s ease-in-out
           opacity: 0
+          @media(max-width: 640px)
+            display: none
 
         &:hover .caption
           transform: translateX(0)
@@ -120,6 +125,8 @@ section.youtube
           width: 15%
           height: auto
           border-bottom: 2px solid $primary
+          @media(max-width: 640px)
+            display: none
 
         &:hover::after
           width: calc(100% - 40px)

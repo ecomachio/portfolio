@@ -28,6 +28,8 @@ section.articles
     display: flex
     flex-direction: column
     align-items: flex-start
+    @media(max-width: 640px)
+      padding-top: 5%
 
     p
       margin: 15px 0
@@ -53,14 +55,17 @@ section.articles
     @media(max-width: 640px)
       display: none
 
-  .col-25    
+  .col-25
     min-width: 25%
     font-size: 2.7px
     height: 35vh
     @media(max-width: 775px)
       min-width: 40%
     @media(max-width: 640px)
-      max-width: 50%
+      max-width: 100%
+      width: auto
+      margin: 1% 5%
+      height: 45vh
     @media(max-width: 1200px)
       min-width: 50%
     a
@@ -82,11 +87,21 @@ section.articles
           font-size: 8.5em
           position: absolute
           top: 15%
-          opacity: 1
           height: 15%
           width: calc(100% - 20px)
           transition: all 0.4s ease-in-out
           opacity: 0
+          @media(max-width: 640px)
+            padding: 0 0 0 20px
+            color: $primary
+            font-size: 8.5em
+            position: absolute
+            top: 20%
+            height: 15%
+            width: calc(100% - 20px)
+            transition: all 0.4s ease-in-out
+            opacity: 1
+
 
         &:hover .caption
           transform: translateX(0)
@@ -116,6 +131,8 @@ section.articles
           width: 15%
           height: auto
           border-bottom: 2px solid $primary
+          @media(max-width: 640px)
+            display: none
 
         &:hover::after
           width: calc(100% - 40px)

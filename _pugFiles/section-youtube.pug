@@ -17,6 +17,6 @@ section.youtube
     +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}{{ post.images[0].url }}", "{{ site.baseurl }}{{ post.url }}")
     |   {% endif %}
     | {% endfor %}
-    .col-50
+    .col-50.fakeRec
       a
         .img-aux(style=" background: #333", data-title="Isso é um retângulo").workRec.caption=""
