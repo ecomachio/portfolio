@@ -19,13 +19,17 @@
   .relatedPosts
     background: $secondary
     color: $primary
-    padding: 1% 5% 5% 5%
+    padding: 1% 15% 5% 15%
+    @media(max-width: 640px)
+      padding: 1% 5% 5% 5%
+
     h1, h2, h3, h4, h5, h6, p
       color: $primary
       transition: all 200ms ease-in-out
 
     .relatedPostsHeader
-      margin-left: 5%
+      @media(max-width: 640px)
+        margin-left: 5%
 
     .postgrid
       display: flex

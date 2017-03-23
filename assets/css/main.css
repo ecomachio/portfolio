@@ -582,13 +582,17 @@ input[type="button"] {
   .post-wrapper .relatedPosts {
     background: #141414;
     color: #fff;
-    padding: 1% 5% 5% 5%; }
+    padding: 1% 15% 5% 15%; }
+    @media (max-width: 640px) {
+      .post-wrapper .relatedPosts {
+        padding: 1% 5% 5% 5%; } }
     .post-wrapper .relatedPosts h1, .post-wrapper .relatedPosts h2, .post-wrapper .relatedPosts h3, .post-wrapper .relatedPosts h4, .post-wrapper .relatedPosts h5, .post-wrapper .relatedPosts h6, .post-wrapper .relatedPosts p {
       color: #fff;
       -webkit-transition: all 200ms ease-in-out;
       transition: all 200ms ease-in-out; }
-    .post-wrapper .relatedPosts .relatedPostsHeader {
-      margin-left: 5%; }
+    @media (max-width: 640px) {
+      .post-wrapper .relatedPosts .relatedPostsHeader {
+        margin-left: 5%; } }
     .post-wrapper .relatedPosts .postgrid {
       display: -webkit-box;
       display: -webkit-flex;
