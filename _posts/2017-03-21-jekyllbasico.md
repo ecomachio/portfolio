@@ -7,9 +7,9 @@ type:   "article"
 title:  "Jekyll - Parte 1"
 date:   2017-03-21 23:11:03
 description: Tutorial Jekyll como instalar e usar jekyll para seu blog ou site
-categories: 
-  - tecnologia 
-  - jekyll 
+categories:
+  - tecnologia
+  - jekyll
   - web
 images:
   - url: /assets/img/jekylllogo.png
@@ -86,7 +86,7 @@ Pra você que gosta de ctrl+c ctrl+v
 
 #### Detalhes da instalação
 
-Para instalar o jekyll você precisa ter ruby instalado. Para instalar ruby clique aqui.
+Para instalar o jekyll você precisa ter ruby instalado. Para instalar ruby <a href="https://rubyinstaller.org/" target="_blank">clique aqui!</a>.
 
  Com o ruby instalado rode os seguintes comandos:
 
