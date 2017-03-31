@@ -51,7 +51,7 @@ O comando **jekyll new** gera a seguinte estrutura de pastas:
 
 **_config.yml** - Arquivo de configuração. As configurações do jekyll podem ser consultadas [aqui](https://jekyllrb.com/docs/configuration/)
 
-**_incluides** - O direitorio includes permite o desenvolvimento modularizado do site. Criando arquivos html nessa pasta eles viram módulos que podem ser incluidos em layouts e posts através da tag:
+**_incluides** - O direitorio includes permite o desenvolvimento modularizado do site. Os arquivos html, criados nessa pasta, viram módulos que podem ser incluidos em layouts e posts através da tag:
  
 ```command
 {{ "{% include footer.html " }}%} 
@@ -65,13 +65,14 @@ O comando **jekyll new** gera a seguinte estrutura de pastas:
 
 **_posts** - Aqui vai o seu conteúdo dinamico. Podem ser escritos em html ou [markdown](http://blog.da2k.com.br/2015/02/08/aprenda-markdown/). O nome dos arquivos posts devem seguir o padrão abaixo:
 
-**_site** - Aqui não pode mexer. Nesse diretorio é onde o jekyll joga o resultado da mágica. Aqui é onde fica o site pronto para ser publicado em um servidor.
-
 ```command
 YEAR-MONTH-DAY-title.MARKUP
 
 2017-03-31-NomeDoPost.md
 ``` 
+
+
+**_site** - Aqui não pode mexer. Nesse diretorio é onde o jekyll joga o resultado da mágica. Aqui é onde fica o site pronto para ser publicado em um servidor.
 
 #### Coisas não tão importantes assim:
 
