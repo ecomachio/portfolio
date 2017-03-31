@@ -51,6 +51,8 @@ O comando **jekyll new** gera a seguinte estrutura de pastas:
 
 **_config.yml** - Arquivo de configuração. As configurações do jekyll podem ser consultadas [aqui](https://jekyllrb.com/docs/configuration/)
 
+**index.html** - Página inicial do site. Todas os arquivos "soltos" na raiz do projeto serão interpretados pelo jekyll. Os arquivos devem conter bloco **YAML front matter** mas isso será visto depois. 
+
 **_incluides** - O direitorio includes permite o desenvolvimento modularizado do site. Os arquivos html, criados nessa pasta, viram módulos que podem ser incluidos em layouts e posts através da tag:
  
 ```command
@@ -63,7 +65,7 @@ O comando **jekyll new** gera a seguinte estrutura de pastas:
 {{ "{{ content " }}}} 
 ``` 
 
-**_posts** - Aqui vai o seu conteúdo dinamico. Podem ser escritos em html ou [markdown](http://blog.da2k.com.br/2015/02/08/aprenda-markdown/). O nome dos arquivos posts devem seguir o padrão abaixo:
+**_posts** - Aqui vai o seu conteúdo dinâmico. Podem ser escritos em html ou [markdown](http://blog.da2k.com.br/2015/02/08/aprenda-markdown/). O nome dos arquivos posts devem seguir o padrão abaixo:
 
 ```command
 YEAR-MONTH-DAY-title.MARKUP
@@ -76,9 +78,13 @@ YEAR-MONTH-DAY-title.MARKUP
 
 #### Coisas não tão importantes assim:
 
+**_sass** - Jekyll suporta [Sass](http://sass-lang.com/). Os arquivos sass serão compilados em um único main.css.
+
 **_data** - Neste diretorio é possível armazenar dados úteis para a aplicação. Suporta extensoes .yml,  .yaml, .json e .csv. Os arquivos desse diretorio serão acessiveis através da variavel **site.data**
 
 **_drafts** - Este diretorio serve para guardar posts que ainda não foram publicados (por isso estão sem data). Para ver uma prévia do site com os drafts publicados pode ser rodado o comando **jekyll serve** com o parametro **--drafts**
+
+**.jekyll-metadata** - Não se precisa se preocupar com esse arquivo. Serve para ajudar o jekyll a saber o que deve ser regerado entre outras informações internas.
 
 ```command
  jekyll serve --drafts
