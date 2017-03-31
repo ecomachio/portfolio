@@ -42,8 +42,44 @@ O servidor está acessivel através do endereço localhost:4000 e deve estar par
 >
  ![jekylllocalhost]({{ site.baseurl }}/assets/img/jekylllocalhost.png "jekyll localhost")
 
+O comando **jekyll new** gera a seguinte estrutura de pastas:
 
+>
+ ![jekyllstructure]({{ site.baseurl }}/assets/img/jekyllstructure.png "jekyll structure")
 
+#### Coisas importantes:
 
+**_config.yml** - Arquivo de configuração. As configurações do jekyll podem ser consultadas [aqui](https://jekyllrb.com/docs/configuration/)
 
+**_incluides** - O direitorio includes permite o desenvolvimento modularizado do site. Criando arquivos html nessa pasta eles viram módulos que podem ser incluidos em layouts e posts através da tag:
+ 
+```command
+{{ "{% include footer.html " }}%} 
+```
+
+**_layouts** - Templates para os posts. Os arquivos da pasta layout serão onde os posts serão incluidos. O conteudo dos posts são impressos no layout através da tag: 
+
+```command
+{{ "{{ content " }}}} 
+``` 
+
+**_posts** - Aqui vai o seu conteúdo dinamico. Podem ser escritos em html ou [markdown](http://blog.da2k.com.br/2015/02/08/aprenda-markdown/). O nome dos arquivos posts devem seguir o padrão abaixo:
+
+**_site** - Aqui não pode mexer. Nesse diretorio é onde o jekyll joga o resultado da mágica. Aqui é onde fica o site pronto para ser publicado em um servidor.
+
+```command
+YEAR-MONTH-DAY-title.MARKUP
+
+2017-03-31-NomeDoPost.md
+``` 
+
+#### Coisas não tão importantes assim:
+
+**_data** - Neste diretorio é possível armazenar dados úteis para a aplicação. Suporta extensoes .yml,  .yaml, .json e .csv. Os arquivos desse diretorio serão acessiveis através da variavel **site.data**
+
+**_drafts** - Este diretorio serve para guardar posts que ainda não foram publicados (por isso estão sem data). Para ver uma prévia do site com os drafts publicados pode ser rodado o comando **jekyll serve** com o parametro **--drafts**
+
+```command
+ jekyll serve --drafts
+ ```
 
