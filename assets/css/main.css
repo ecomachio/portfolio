@@ -1103,7 +1103,10 @@ section.articles {
   padding: 0;
   background: #fff;
   position: relative;
-  font-family: 'Avenirltstd heavy'; }
+  font-family: 'Avenirltstd heavy';
+  margin-bottom: -webkit-calc(80vh - 2px);
+  margin-bottom: calc(80vh - 2px);
+  border-bottom: 2px solid #141414; }
   section.articles .work {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -1298,9 +1301,10 @@ section.contact {
   background: #fff;
   position: relative;
   font-family: 'Avenirltstd heavy';
-  border-top: 2px solid #141414;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  bottom: 0; }
   @media (max-width: 775px) {
     section.contact {
       border-top: none; } }
