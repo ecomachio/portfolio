@@ -23,7 +23,70 @@ social:
     - https://github.com/ecomachio    
 ---
 
-## O que é Jekyll?   
+## Estrutura e Funcionamento
 
 [Na parte 1 do tutorial Jekyll aprendemos a o que é o jekyll e como instalar.]({{ site.baseurl }}/tecnologia/jekyll/web/2017/03/21/jekyllbasico.html)
+
+Agora vamos conhecer a estrutura e o funcionamento do jekyll.
+
+### Estrutura
+
+A última parte do tutorial anterior subimos o servidor jekyll através do comando:
+
+```command
+ jekyll serve
+ ```
+
+O servidor está acessivel através do endereço localhost:4000 e deve estar parecido com isso:
+
+>
+ ![jekylllocalhost]({{ site.baseurl }}/assets/img/jekylllocalhost.png "jekyll localhost")
+
+O comando **jekyll new** gera a seguinte estrutura de pastas:
+
+>
+ ![jekyllstructure]({{ site.baseurl }}/assets/img/jekyllstructure.png "jekyll structure")
+
+#### Coisas importantes:
+
+**_config.yml** - Arquivo de configuração. As configurações do jekyll podem ser consultadas [aqui](https://jekyllrb.com/docs/configuration/)
+
+**index.html** - Página inicial do site. Todas os arquivos "soltos" na raiz do projeto serão interpretados pelo jekyll. Os arquivos devem conter bloco **YAML front matter** mas isso será visto depois. 
+
+**_incluides** - O direitorio includes permite o desenvolvimento modularizado do site. Os arquivos html, criados nessa pasta, viram módulos que podem ser incluidos em layouts e posts através da tag:
+ 
+```command
+{{ "{% include footer.html " }}%} 
+```
+
+**_layouts** - Templates para os posts. Os arquivos da pasta layout serão onde os posts serão incluidos. O conteudo dos posts são impressos no layout através da tag: 
+
+```command
+{{ "{{ content " }}}} 
+``` 
+
+**_posts** - Aqui vai o seu conteúdo dinâmico. Podem ser escritos em html ou [markdown](http://blog.da2k.com.br/2015/02/08/aprenda-markdown/). O nome dos arquivos posts devem seguir o padrão abaixo:
+
+```command
+YEAR-MONTH-DAY-title.MARKUP
+
+2017-03-31-NomeDoPost.md
+``` 
+
+
+**_site** - Aqui não pode mexer. Nesse diretorio é onde o jekyll joga o resultado da mágica. Aqui é onde fica o site pronto para ser publicado em um servidor.
+
+#### Coisas não tão importantes assim:
+
+**_sass** - Jekyll suporta [Sass](http://sass-lang.com/). Os arquivos sass serão compilados em um único main.css.
+
+**_data** - Neste diretorio é possível armazenar dados úteis para a aplicação. Suporta extensoes .yml,  .yaml, .json e .csv. Os arquivos desse diretorio serão acessiveis através da variavel **site.data**
+
+**_drafts** - Este diretorio serve para guardar posts que ainda não foram publicados (por isso estão sem data). Para ver uma prévia do site com os drafts publicados pode ser rodado o comando **jekyll serve** com o parametro **--drafts**
+
+**.jekyll-metadata** - Não se precisa se preocupar com esse arquivo. Serve para ajudar o jekyll a saber o que deve ser regerado entre outras informações internas.
+
+```command
+ jekyll serve --drafts
+ ```
 

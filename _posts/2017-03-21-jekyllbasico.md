@@ -121,3 +121,5 @@ Após iniciar um novo projeto, é só subir o servidor local. O servidor local s
   ![jekyll serve]({{ site.baseurl }}/assets/img/jekyllserve.gif "jekyll serve")  
 
 Agora o servidor jekyll pode ser acessado através do endereço **localhost:4000**
+
+[Na parte 2 do tutorial vamos conhecer melhor a estrutura do jekyll. Acompanha aí vlw flw]({{ site.baseurl }}/tecnologia/jekyll/web/2017/03/20/jekyllbasicopt2.html)
