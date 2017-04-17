@@ -829,7 +829,8 @@ section.about {
   width: 100%;
   padding: 0;
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   section.about .col-2 {
     margin-left: 47%; }
     @media (max-width: 1024px) {
@@ -912,7 +913,8 @@ section.youtube {
   position: relative;
   font-family: 'Avenirltstd heavy';
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  z-index: 1; }
   section.youtube .work {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -1106,7 +1108,8 @@ section.articles {
   font-family: 'Avenirltstd heavy';
   margin-bottom: -webkit-calc(80vh - 2px);
   margin-bottom: calc(80vh - 2px);
-  border-bottom: 2px solid #141414; }
+  border-bottom: 2px solid #141414;
+  z-index: 1; }
   @media (max-width: 640px) {
     section.articles {
       border-bottom: none;
@@ -1307,7 +1310,7 @@ section.contact {
   font-family: 'Avenirltstd heavy';
   width: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   bottom: 0; }
   @media (max-width: 775px) {
     section.contact {
@@ -1339,7 +1342,8 @@ section.contact {
         section.contact .col-2 ul li:last-child {
           margin-bottom: 0; }
   section.contact .kudos {
-    margin: 1.5em auto 0 auto !important; }
+    margin: 1.5em 50% 0px auto !important;
+    font-size: 20px !important; }
     @media (max-width: 775px) {
       section.contact .kudos {
         margin: 1.5em auto 4.5em auto !important; } }
