@@ -870,6 +870,11 @@ section.about {
       section.about h2 {
         font-size: 340%;
         line-height: 50px; } }
+    @media (max-width: 1367px) {
+      section.about h2 {
+        margin-top: 30%;
+        font-size: 470%;
+        line-height: 74px; } }
   section.about .home-lead {
     padding-bottom: 180px; }
   section.about .lead-line {
@@ -1328,6 +1333,9 @@ section.contact {
         margin-left: 10%; }
         section.contact .col-2 h1, section.contact .col-2 h2 {
           font-size: 2.5em; } }
+    @media (max-width: 1367px) {
+      section.contact .col-2 h1, section.contact .col-2 h2 {
+        font-size: 2em; } }
     section.contact .col-2 ul {
       list-style: none;
       margin: 10px 0 20px 0;
@@ -1339,11 +1347,17 @@ section.contact {
       section.contact .col-2 ul li {
         margin-bottom: 12px;
         font-size: 2em; }
+        @media (max-width: 1367px) {
+          section.contact .col-2 ul li {
+            font-size: 1.5em; } }
         section.contact .col-2 ul li:last-child {
           margin-bottom: 0; }
   section.contact .kudos {
     margin: 1.5em 50% 0px auto !important;
     font-size: 20px !important; }
+    @media (max-width: 1367px) {
+      section.contact .kudos {
+        margin: 1em 50% 0px auto !important; } }
     @media (max-width: 775px) {
       section.contact .kudos {
         margin: 1.5em auto 4.5em auto !important; } }
