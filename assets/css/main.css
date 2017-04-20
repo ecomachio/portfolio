@@ -862,19 +862,19 @@ section.about {
     font-family: 'Avenirltstd heavy';
     font-size: 500%;
     line-height: 74px; }
+    @media (max-width: 1367px) {
+      section.about h2 {
+        margin-top: 30%;
+        font-size: 470%;
+        line-height: 74px; } }
     @media (max-width: 775px) {
       section.about h2 {
         margin: 15% 0 4% 0;
         font-size: 450%; } }
     @media (max-width: 470px) {
       section.about h2 {
-        font-size: 340%;
-        line-height: 50px; } }
-    @media (max-width: 1367px) {
-      section.about h2 {
-        margin-top: 30%;
-        font-size: 470%;
-        line-height: 74px; } }
+        font-size: 350%;
+        line-height: 55px; } }
   section.about .home-lead {
     padding-bottom: 180px; }
   section.about .lead-line {
