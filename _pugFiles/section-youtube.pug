@@ -17,8 +17,7 @@ section.youtube#projetos
     +rec("{{ post.name }}", "{{ post.about }}", "{{ site.baseurl }}{{ post.images[0].url }}", "{{ site.baseurl }}{{ post.url }}")
     |{% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
     |   {% endif %}
-    | {% endfor %}
-    |{% post_count %}
+    | {% endfor %}    
     |{% assign odd = post_count | modulo: 2 %}
     |{% if odd != 0 %}    
     .col-50.fakeRec
