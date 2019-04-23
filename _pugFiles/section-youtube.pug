@@ -18,6 +18,7 @@ section.youtube#projetos
     |{% capture post_count %} {{ post_count | plus: 1 }} {% endcapture %}
     |   {% endif %}
     | {% endfor %}
+    |{% post_count %}
     |{% assign odd = post_count | modulo: 2 %}
     |{% if odd != 0 %}    
     .col-50.fakeRec
